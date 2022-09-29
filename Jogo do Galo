@@ -1,4 +1,3 @@
-
 ##(desenvolvido por LoRicky2410)
 
 ###############################
@@ -42,23 +41,51 @@ while ganhou == False and jogada < 10:  ###Maximo de jogadas.###
         jogada,
     )
     if posiçao == 1:  ###posiçoes que a pessoa escolhe###
-        e1 = jogador_atual
+        if e1 == "1":
+            e1 = jogador_atual
+        else:
+            print("Jogada invalida")
     elif posiçao == 2:
+        if e2 == "2":
+            e2 = jogador_atual
+        else:
+            print("Jogada invalida")
         e2 = jogador_atual
     elif posiçao == 3:
-        e3 = jogador_atual
+        if e3 == "3":
+            e3 = jogador_atual
+        else:
+            print("Jogada invalida")
     elif posiçao == 4:
-        e4 = jogador_atual
+        if e4 == "4":
+            e4 = jogador_atual
+        else:
+            print("Jogada invalida")
     elif posiçao == 5:
-        e5 = jogador_atual
+        if e5 == "5":
+            e5 = jogador_atual
+        else:
+            print("Jogada invalida")
     elif posiçao == 6:
-        e6 = jogador_atual
+        if e6 == "6":
+            e6 = jogador_atual
+        else:
+            print("Jogada invalida")
     elif posiçao == 7:
-        e7 = jogador_atual
+        if e7 == "7":
+            e7 = jogador_atual
+        else:
+            print("Jogada invalida")
     elif posiçao == 8:
-        e8 = jogador_atual
+        if e8 == "8":
+            e8 = jogador_atual
+        else:
+            print("Jogada invalida")
     elif posiçao == 9:
-        e9 = jogador_atual
+        if e9 == "9":
+            e9 = jogador_atual
+        else:
+            print("Jogada invalida")
     else:
         print("Jogada invalida proximo jogador a iniciar a sua jogada")
         ## diz que a jogada é invalida ##
