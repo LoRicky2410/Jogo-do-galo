@@ -1,0 +1,94 @@
+
+##(desenvolvido por LoRicky2410)
+
+###############################
+####espaços do jogo do galo####
+###############################
+e1 = "1"
+e2 = "2"
+e3 = "3"
+e4 = "4"
+e5 = "5"
+e6 = "6"
+e7 = "7"
+e8 = "8"
+e9 = "9"
+#########################
+###Jogadores e Jogadas###
+#########################
+jogador_atual = "X"
+jogada = 1
+ganhou = False
+####################################
+###Mostrar o Tabuleiro para jogar###
+####################################
+print("------------")
+print("Jogo do Galo")
+print("------------")
+print("|" + e1 + " | " + e2 + " | " + e3 + "| ")
+print("------------")
+print("|" + e4 + " | " + e5 + " | " + e6 + "| ")
+print("------------")
+print("|" + e7 + " | " + e8 + " | " + e9 + "| ")
+print("------------")
+#############
+###posiçao###
+#############
+while ganhou == False and jogada < 10:  ###Maximo de jogadas.###
+    posiçao = int(input(jogador_atual + ", qual posiçao quer jogar?: "))
+    jogada += 1
+    print(
+        "está na jogada: ",
+        jogada,
+    )
+    if posiçao == 1:  ###posiçoes que a pessoa escolhe###
+        e1 = jogador_atual
+    elif posiçao == 2:
+        e2 = jogador_atual
+    elif posiçao == 3:
+        e3 = jogador_atual
+    elif posiçao == 4:
+        e4 = jogador_atual
+    elif posiçao == 5:
+        e5 = jogador_atual
+    elif posiçao == 6:
+        e6 = jogador_atual
+    elif posiçao == 7:
+        e7 = jogador_atual
+    elif posiçao == 8:
+        e8 = jogador_atual
+    elif posiçao == 9:
+        e9 = jogador_atual
+    else:
+        print("Jogada invalida proximo jogador a iniciar a sua jogada")
+        ## diz que a jogada é invalida ##
+
+    print("------------")  ##Repete a apariçao do tabuleiro##
+    print("Jogo do Galo")
+    print("------------")
+    print("|" + e1 + " | " + e2 + " | " + e3 + "| ")
+    print("------------")
+    print("|" + e4 + " | " + e5 + " | " + e6 + "| ")
+    print("------------")
+    print("|" + e7 + " | " + e8 + " | " + e9 + "| ")
+    print("------------")
+
+    if ((e1 == e2 and e2 == e3 and e3 == jogador_atual)
+            or (e4 == e5 and e5 == e6 and e6 == jogador_atual)
+            or (e7 == e8 and e8 == e9 and e9 == jogador_atual)
+            or (e1 == e4 and e4 == e7 and e7 == jogador_atual)
+            or (e2 == e5 and e5 == e8 and e8 == jogador_atual)
+            or (e3 == e6 and e6 == e9 and e9 == jogador_atual)
+            or (e3 == e5 and e5 == e7 and e7 == jogador_atual)):
+        print("Ganhou o", jogador_atual)
+        ganhou = True
+    elif jogada == 10 and ganhou == False:
+        print(
+            "empatou"
+        )  #faz com que o jogo empate se nao verificar que o jogador ganhou ou a jogada é dez
+
+    if jogador_atual == "X":
+        jogador_atual = "O"  ### Mudar a vez de quem joga ###
+    else:
+        jogador_atual = "X"
+######################
