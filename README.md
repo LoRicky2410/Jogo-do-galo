@@ -1,2 +1,2 @@
-# Jogo-do-galo-em,-phyton
+# Jogo-do-galo-em-phyton
 (Jogo do Galo)
